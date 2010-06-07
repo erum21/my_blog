@@ -712,3 +712,130 @@ Processing UsersController#show (for 127.0.0.1 at 2010-06-06 21:05:55) [GET]
 Rendering template within layouts/users
 Rendering users/show
 Completed in 20ms (View: 6, DB: 1) | 200 OK [http://localhost/users/3]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-06-06 22:57:21) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 31ms (View: 19, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-06-06 22:57:23) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 20ms (View: 6, DB: 0) | 200 OK [http://localhost/users/2]
+
+
+Processing MicropostsController#show (for 127.0.0.1 at 2010-06-06 22:57:32) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mMicropost Load (0.0ms)[0m   [0;1mSELECT * FROM "microposts" WHERE ("microposts"."id" = 2) [0m
+Rendering template within layouts/microposts
+Rendering microposts/show
+Completed in 19ms (View: 5, DB: 0) | 200 OK [http://localhost/microposts/2]
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (82.0ms)[0m   [0;1mCREATE TABLE "microposts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar(255), "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (58.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (83.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (25.0ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mSQL (33.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100606015031')[0m
+  [4;36;1mSQL (49.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100604033915')[0m
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2010-06-07 12:30:10) [GET]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 48ms (View: 6, DB: 0) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing MicropostsController#index (for 127.0.0.1 at 2010-06-07 12:30:21) [GET]
+  [4;36;1mMicropost Load (1.0ms)[0m   [0;1mSELECT * FROM "microposts" [0m
+Rendering template within layouts/microposts
+Rendering microposts/index
+Completed in 404ms (View: 355, DB: 1) | 200 OK [http://localhost/microposts]
+
+
+Processing MicropostsController#new (for 127.0.0.1 at 2010-06-07 12:30:28) [GET]
+Rendering template within layouts/microposts
+Rendering microposts/new
+Completed in 22ms (View: 14, DB: 0) | 200 OK [http://localhost/microposts/new]
+
+
+Processing MicropostsController#show (for 127.0.0.1 at 2010-06-07 12:30:35) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMicropost Load (0.0ms)[0m   [0mSELECT * FROM "microposts" WHERE ("microposts"."id" = 1) [0m
+Rendering template within layouts/microposts
+Rendering microposts/show
+Completed in 13ms (View: 6, DB: 0) | 200 OK [http://localhost/microposts/1]
+
+
+Processing MicropostsController#show (for 127.0.0.1 at 2010-06-07 12:30:39) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mMicropost Load (0.0ms)[0m   [0;1mSELECT * FROM "microposts" WHERE ("microposts"."id" = 2) [0m
+Rendering template within layouts/microposts
+Rendering microposts/show
+Completed in 19ms (View: 6, DB: 0) | 200 OK [http://localhost/microposts/2]
+
+
+Processing MicropostsController#destroy (for 127.0.0.1 at 2010-06-07 12:30:48) [DELETE]
+  Parameters: {"authenticity_token"=>"QZ0WoKTD5wrpiSLRjsjOi3yJ/v5Om+VPSxDPEsRNMJI=", "id"=>"8"}
+  [4;35;1mMicropost Load (0.0ms)[0m   [0mSELECT * FROM "microposts" WHERE ("microposts"."id" = 8) [0m
+  [4;36;1mMicropost Destroy (1.0ms)[0m   [0;1mDELETE FROM "microposts" WHERE "id" = 8[0m
+Redirected to http://localhost:3000/microposts
+Completed in 58ms (DB: 1) | 302 Found [http://localhost/microposts/8]
+
+
+Processing MicropostsController#index (for 127.0.0.1 at 2010-06-07 12:30:50) [GET]
+  [4;35;1mMicropost Load (1.0ms)[0m   [0mSELECT * FROM "microposts" [0m
+Rendering template within layouts/microposts
+Rendering microposts/index
+Completed in 30ms (View: 18, DB: 1) | 200 OK [http://localhost/microposts]
+
+
+Processing MicropostsController#destroy (for 127.0.0.1 at 2010-06-07 12:30:57) [DELETE]
+  Parameters: {"authenticity_token"=>"QZ0WoKTD5wrpiSLRjsjOi3yJ/v5Om+VPSxDPEsRNMJI=", "id"=>"9"}
+  [4;36;1mMicropost Load (1.0ms)[0m   [0;1mSELECT * FROM "microposts" WHERE ("microposts"."id" = 9) [0m
+  [4;35;1mMicropost Destroy (2.0ms)[0m   [0mDELETE FROM "microposts" WHERE "id" = 9[0m
+Redirected to http://localhost:3000/microposts
+Completed in 65ms (DB: 3) | 302 Found [http://localhost/microposts/9]
+
+
+Processing MicropostsController#index (for 127.0.0.1 at 2010-06-07 12:30:58) [GET]
+  [4;36;1mMicropost Load (1.0ms)[0m   [0;1mSELECT * FROM "microposts" [0m
+Rendering template within layouts/microposts
+Rendering microposts/index
+Completed in 27ms (View: 15, DB: 1) | 200 OK [http://localhost/microposts]
+
+
+Processing MicropostsController#new (for 127.0.0.1 at 2010-06-07 12:30:59) [GET]
+Rendering template within layouts/microposts
+Rendering microposts/new
+Completed in 15ms (View: 8, DB: 0) | 200 OK [http://localhost/microposts/new]
