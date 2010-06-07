@@ -1,5 +1,6 @@
 *.[oa]
 log/*.log
+log/development.log
 tmp/*
 tmp/**/*
 doc/api
